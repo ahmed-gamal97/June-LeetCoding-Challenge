@@ -49,7 +49,7 @@ class Solution:
 ```
 ### Complexity: O(1) , space: O(1)
 -----------------------
-2) https://leetcode.com/problems/two-city-scheduling/ </br>
+3) https://leetcode.com/problems/two-city-scheduling/ </br>
 - There are 2N people a company is planning to interview. The cost of flying the i-th person to city A is costs[i][0], and the cost of flying the i-th person to city B is costs[i][1].
 - Return the minimum cost to fly every person to a city such that exactly N people arrive in each city.
 ```python
@@ -70,3 +70,22 @@ class Solution:
         return minimum_to_A + minimum_to_B
 ```
 ### Complexity: O(nlog(n)) , space: O(1)
+-----------------------
+4) https://leetcode.com/problems/reverse-string/ </br>
+- Write a function that reverses a string. The input string is given as an array of characters char[].
+- Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
+```python
+class Solution:
+    def reverseString(self, s: List[str]) -> None:
+        """
+        Do not return anything, modify s in-place instead.
+        """
+        first = 0
+        last = len(s) - 1
+
+        while first < last:
+            s[first], s[last] = s[last], s[first]
+            first += 1
+            last -= 1
+```
+### Complexity: O(n) , space: O(1)
